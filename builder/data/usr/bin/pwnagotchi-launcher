@@ -9,8 +9,9 @@ if is_crypted_mode; then
   done
 fi
 
-if is_auto_mode_no_delete; then
-  /usr/local/bin/bettercap -no-colors -caplet pwnagotchi-auto -iface wlan0mon
+if is_auto_mode; then
+  /usr/local/src/pwnagotchi/env/bin/pwnagotchi
+  systemctl restart bettercap
 else
-  /usr/local/bin/bettercap -no-colors -caplet pwnagotchi-manual -iface wlan0mon
+  /usr/local/src/pwnagotchi/env/bin/pwnagotchi --manual
 fi

@@ -6,6 +6,7 @@ import logging
 import asyncio
 #import _thread
 import threading
+import subprocess
 
 import pwnagotchi
 import pwnagotchi.utils as utils
